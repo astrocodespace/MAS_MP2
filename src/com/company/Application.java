@@ -5,12 +5,24 @@ public class Application {
     private Candidate candidate;
     private String applicationFile;
 
-    public Application(Candidate candidate,
-                       String applicationFile,
-                       Employer employer) {
-        this.candidate = candidate;
+    public Application(String applicationFile) {
         this.applicationFile = applicationFile;
+    }
+
+    public void setCandidate(Candidate candidate) {
+        this.candidate = candidate;
+    }
+
+    public void setEmployer(Employer employer) {
         this.employer = employer;
     }
 
+    @Override
+    public String toString() {
+        return "Application{" +
+                "employer=" + employer +
+                ", candidate=" + candidate +
+                ", applicationFile='" + applicationFile + '\'' +
+                '}';
+    }
 }

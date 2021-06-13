@@ -20,7 +20,7 @@ public class EmployerEventProfile {
     public static EmployerEventProfile createProfile(Event event,
                                                      Employer employer,
                                                      String name,
-                                                     String profilePhoto) {
+                                                     String profilePhoto) throws Exception {
         EmployerEventProfile eventProfile = new EmployerEventProfile(employer, name, profilePhoto);
         employer.fillProfileForEvent(event, eventProfile);
 
